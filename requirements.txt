@@ -1,0 +1,6 @@
+langchain-groq
+sentence_transformers
+langchain-community
+qdrant-client
+langgraph
+langchain-huggingface
