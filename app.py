@@ -27,7 +27,7 @@ def get_llm():
         top_p=1,
         stream=False,
         stop=None,
-        api_key='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'
+        api_key='your api key'
     )
     return llm
 
@@ -45,7 +45,7 @@ def get_vector_store():
         with st.spinner("Loading vector store..."):
             embeddings = get_embeddings()
             url = "https://01e87bb9-38e4-4af2-bc56-e1fa251e9888.us-east4-0.gcp.cloud.qdrant.io:6333"
-            api_key = "AUZLtuWlSaK3shi__AE7676-sA7r933Lv38z690sYuE_j2LHU8yqSQ"
+            api_key = "your api key"
             client = QdrantClient(url=url, api_key=api_key, prefer_grpc=True)
             st.session_state.vector_store = Qdrant(client=client, collection_name="my_documents", embeddings=embeddings)
         st.success("Vector store loaded successfully.")
